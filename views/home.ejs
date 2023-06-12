@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FZAStudio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Aboreto">
+        
+    <style>
+      .nav {
+        text-align: center;
+      }
+
+       .navbar-custom {
+            background-color: black;
+            text-align: center;
+
+       }
+
+       .nav-link {
+            padding: 0.25rem 0;
+            font-weight: 400;
+            color: rgba(255,255,255,0.5);
+            margin-left: 1rem;
+            border-bottom: 0.25rem solid transparent;
+            text-align: center;
+            font-family: 'Aboreto';
+        }
+
+        .nav-link:hover{
+            color: rgba(255,255,255,0.5);
+            border-bottom-color:rgba(255,255,255,0.5);
+            text-align: center;
+        }
+
+        .nav-link.active {
+            color: white;
+            border-bottom-color:white;
+            text-align: center;
+        }
+
+        .nav a {
+          text-align: center;
+        }
+
+        .navbar-collapse{
+            flex-grow: 0;
+        }
+
+        .footer-custom{
+            background-color: black;
+        }
+
+
+
+        .section2 {
+            /* Background image doesn't tile */
+            background-repeat: no-repeat;
+            /* Set a background color that will be displayed
+            while the background image is loading */
+            background-color: black;
+            height: auto;
+            position: relative;
+            background-image:url('https://res.cloudinary.com/hamaf/image/upload/v1684563014/FZAlogoInverted_ymtb7u.png') ;
+            background-position: 50%;
+            background-position-y: 15%;
+        }
+        .bg{
+            width: 100%;
+            z-index: 0;
+            }
+
+        .section3 {
+            /* Background image doesn't tile */
+            /* Set a background color that will be displayed
+            while the background image is loading */
+            background-color: white;
+        
+             height: auto; 
+            position: relative;
+            background-image:url('https://res.cloudinary.com/hamaf/image/upload/v1661130140/afham.com/section3_iypd1p.png') ;
+            background-position:center;
+        }
+
+        .section4 {
+            /* Background image doesn't tile */
+            /* Set a background color that will be displayed
+            while the background image is loading */
+            background-color: black;
+          
+             height: 1000px; 
+            position: relative;
+            background-position:center;
+        }
+
+        .section5 {
+          flex-wrap: wrap;
+            /* Background image doesn't tile */
+            /* Set a background color that will be displayed
+            while the background image is loading */
+           
+            background-size: cover;
+            /* Background image doesn't tile */
+            background-repeat: repeat;
+            /* Set a background color that will be displayed
+            while the background image is loading */
+            height: auto; 
+            position: relative;
+            background-position:center;
+            background-image:url('https://res.cloudinary.com/hamaf/image/upload/v1661191146/afham.com/Ab-parralaz_kacozr.png');
+            background-position:center;
+    
+            background-color: black;
+            color: black;
+        }
+
+        .section6 {
+            /* Background image doesn't tile */
+            /* Set a background color that will be displayed
+            while the background image is loading */
+            background-color: white;
+        
+            height: auto; 
+            position: relative;
+        }
+
+
+
+        .para {
+            font-family: "Lucida Sans Typewriter","Lucida Console",Monaco,"Bitstream Vera Sans Mono",monospace;
+            font-weight: 300;
+            font-size: 13px;
+            color: white;
+            line-height: 26px;
+    
+        }
+
+        .row {
+            display: flex;
+            }
+
+        .column-3 {
+            flex: 50%;
+        }
+
+        .column_container{
+            display: flex;
+            width: 959px;
+            margin: 0 auto;
+        }
+        .button a{
+            font-size: 28px;
+            font-family: 'Aboreto', sans-serif;
+            margin-top: 1em;
+            margin-left: auto;
+            margin-right:auto;
+            text-align: center;
+
+            /* Stryling the text and giving it gradiant */
+            color:#ffffff;
+            background: -webkit-linear-gradient(#eee, #333);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+
+            /* Make sure text is infront of background images */
+            display:block;
+            position: relative;
+            z-index: 2;
+            }
+        
+            .grid-ish{
+            flex: 1 1 10em;
+            }
+                              
+    </style>
+
+</head>
+<body class="d-flex flex-column " style="overflow:scroll">
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark navbar-custom ">
+        <div class="container-fluid justify-content-center">
+            <a class="navbar-brand" href="#">
+                <img src="https://res.cloudinary.com/hamaf/image/upload/v1684564425/fzatitle_1_-fotor-bg-remover-2023052023332_wpjvxi.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="https://github.com/FizzaAwan">GITHUB</a>
+                    <a class="nav-link" href="https://github.com/FizzaAwan/Resume/raw/main/Fizza%20Resume%20.docx.pdf">RESUME</a>
+                    <a class="nav-link" href="/contact">CONTACT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    
+    <div class="section2 flex">
+        
+        <p style="margin-top: 400px;  margin-left: auto; margin-right:auto;  text-align: center; font-weight: bolder; margin-bottom: 100px;" class="para">
+            I am an undergrad biomechanical engineering student 
+            <br> at Stony Brook University. 
+            <br> I started programming with Java with Data Structures,
+            <br> learned HTML, alongside CSS and javascripts,
+            <br> and have been honing my frontend skills alongside Python.
+        </p>
+    </div>
+
+    <div class="section3 row">
+        <h1 style="
+        color: black; 
+        font-family: Aboreto; 
+        margin-top: 100px;
+        margin-left: auto;
+        margin-bottom: auto;
+        margin-right:auto;
+        text-align: center;
+        font-size: 4em;
+        flex-wrap: wrap;
+        "> Education & Experience</h1>
+
+        <div class="row grid-ish">
+            <div class="column_container" style="padding-left: 10px; padding-right:10px">
+            <div class="column-3">
+                <br><br><br><br>
+                <p style="font-family: Aboreto ;"> 
+                    <mark style="background-color: #fff899; color: black;">
+                        Stony Brook University 
+                    </mark> <br>
+                    2021-2023 Biomedical engineering B.S  
+                </p>
+                <br>
+                <p style="font-family: Aboreto ;"> 
+                    <mark style="background-color: #fff899; color: black;">
+                        East Stroudsburg University Learning Center
+                    </mark> <br>
+                    09/2022-12/2022. East Stroudsburg, PA 
+                    <br> 
+                </p> <br> 
+                <p style="font-family: Aboreto ;"> 
+                    <mark style="background-color: #fff899; color: black;">
+                        Lehigh Valley Hospital 
+                    </mark> <br>
+                    07/2021-10/2021.<br> Phlebotomist 
+                </p><br> 
+      
+            </div>
+
+            <div class="column-3">
+                <br><br><br><br>
+                <p style="font-family: Aboreto ;"> 
+                    <mark style="background-color: #fff899; color: black;">
+                        College STEM Tutor
+                    </mark>  <br></br>
+                    Tutor for Organic chemistry, Gen Chem, Discrete Mathematics. Reviewed code in Java, guiding new comp sci students in creating outlines for their solutions to their programming
+                    assignments, alongside debugging.
+                    
+                </p> <br> 
+
+                <p style="font-family: Aboreto ;"> 
+                  <mark style="background-color: #fff899; color: black;">
+                      Quest Diagnostics 
+                  </mark> <br>
+                  10/2020-02/2021. Technican 
+              </p>
+               <br> <br><br>
+            </div>
+
+        </div>
+        </div>
+
+    </div>
+
+
+    <footer class="footer footer-custom py-3 mt-auto" style="
+    text-align: center;
+"> 
+<div class="container">
+  
+  <a class="navbar-brand" href="#">
+      <img src="https://res.cloudinary.com/hamaf/image/upload/v1661307335/Fza/download_3_q5yeuj.png" alt="" width="30" height="24" class="d-inline-block align-text-top" style="margin-left: 1em;">
+    </a>
+
+    <span class="text-muted">&copy; FZA Studio 2023</span>
+</div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
